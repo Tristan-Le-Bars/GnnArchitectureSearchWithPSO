@@ -53,7 +53,7 @@ class Particle:
         vel_soc = self.social * r2 * (self.informants_best[1])
         self.velocity_hidden_dim = inertia_weight * self.velocity_hidden_dim + vel_soc + vel_cog
 
-    # Update the weights and biases
+    # Update the hidden num and dim
     def change_wb(self):
             self.velocity_hidden_num = self.velocity_hidden_num + self.hidden_num
             self.velocity_hidden_dim = self.velocity_hidden_dim + self.hidden_dim
