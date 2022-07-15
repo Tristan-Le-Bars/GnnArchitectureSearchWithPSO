@@ -7,7 +7,7 @@ class Particle:
     def __init__(self):
         self.hidden_dim = 1
         self.hidden_num = 1
-        self.parameters = NN_parameters()
+        # self.parameters = NN_parameters()
         self.cognitiveCoef = 1 # can be changed
         self.socialCoef = 1 # can be changed
         self.informantList = []
