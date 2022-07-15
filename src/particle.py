@@ -41,16 +41,16 @@ class Particle:
         r1 = random.random()
         r2 = random.random()
 
-        vel_cog = self.cognitive * r1 * (self.best_wb[0])
-        vel_soc = self.social * r2 * (self.informants_best[0])
+        vel_cog = self.cognitive * r1 * (self.best_wb[0] - self.hidden_num)
+        vel_soc = self.social * r2 * (self.informants_best[0] - self.hidden_num)
         self.velocity_hidden_num = inertia_weight * self.velocity_hidden_num + vel_soc + vel_cog
 
         #Change the velocity values for B1
         r1 = random.random()
         r2 = random.random()
 
-        vel_cog = self.cognitive * r1 * (self.best_wb[1])
-        vel_soc = self.social * r2 * (self.informants_best[1])
+        vel_cog = self.cognitive * r1 * (self.best_wb[1] - self.hidden_dim)
+        vel_soc = self.social * r2 * (self.informants_best[1] - self.hidden_dim)
         self.velocity_hidden_dim = inertia_weight * self.velocity_hidden_dim + vel_soc + vel_cog
 
     # Update the hidden num and dim
